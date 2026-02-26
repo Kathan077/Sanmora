@@ -336,7 +336,7 @@ const UnderDevelopment = () => {
                 Connect With Us
               </h4>
               <div className="space-y-5">
-                <div className="flex items-start gap-4 group cursor-pointer">
+                <a href="mailto:sanmora.techno@gmail.com" className="flex items-start gap-4 group cursor-pointer">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary/10 transition-all">
                     <Mail size={18} />
                   </div>
@@ -344,9 +344,9 @@ const UnderDevelopment = () => {
                     <p className="text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">Email Us</p>
                     <p className="text-sm text-slate-300 group-hover:text-white transition-colors">sanmora.techno@gmail.com</p>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-start gap-4 group cursor-pointer">
+                <a href="tel:8780005326" className="flex items-start gap-4 group cursor-pointer">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary group-hover:bg-secondary/10 transition-all">
                     <Phone size={18} />
                   </div>
@@ -354,7 +354,7 @@ const UnderDevelopment = () => {
                     <p className="text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">Call Us</p>
                     <p className="text-sm text-slate-300 group-hover:text-white transition-colors">87800 05326</p>
                   </div>
-                </div>
+                </a>
 
                 <a 
                   href="https://www.google.com/maps/dir//Sanmora,+Sattadhar+char-rasta,+BRTS+stop,+13+virat+complex,+near+satadhar,+Ghatlodiya,+Ahmedabad,+Gujarat+380051/@23.0690054,72.5298643,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395e83b5141d82cd:0x6e7147490e2dfb16!2m2!1d72.532802!2d23.0631272?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
@@ -367,7 +367,7 @@ const UnderDevelopment = () => {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">Visit Us</p>
-                    <p className="text-sm text-slate-300 group-hover:text-white transition-colors underline decoration-slate-600 underline-offset-4 decoration-dashed">Ahmedabad, Gujarat</p>
+                    <p className="text-sm text-slate-300 group-hover:text-white transition-colors  decoration-slate-600  ">Ahmedabad, Gujarat</p>
                   </div>
                 </a>
               </div>
@@ -377,7 +377,7 @@ const UnderDevelopment = () => {
           <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-slate-500 text-sm font-light">
               © {new Date().getFullYear()}{" "}
-              <span className="text-slate-300 font-medium">Sanmora Inc.</span> All rights reserved.
+              <span className="text-slate-300 font-medium">Sanmora.in</span> All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <button className="text-xs text-slate-500 hover:text-slate-300 transition-colors uppercase tracking-widest">Privacy Policy</button>
