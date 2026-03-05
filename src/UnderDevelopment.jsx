@@ -31,6 +31,8 @@ const Navbar = () => {
           src={Logo}
           alt="Sanmora Logo - Website Development & Digital Marketing Ahmedabad"
           className="h-[80px] w-auto object-contain"
+          fetchpriority="high"
+          loading="eager"
         />
       </div>
 
@@ -272,6 +274,21 @@ const UnderDevelopment = () => {
               </p>
             )}
           </form>
+        </section>
+
+        {/* SEO FAQ SECTION - Top Ranking Booster */}
+        <section className="w-full mt-24 text-left border-t border-white/5 pt-12 relative z-20">
+          <h2 className="text-3xl font-bold text-white mb-8">Frequently Asked Questions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/5 backdrop-blur-sm">
+              <h3 className="text-lg font-bold text-primary mb-2">Which is the best website development company in Ahmedabad?</h3>
+              <p className="text-slate-400 text-sm">Sanmora Techno is a leading choice for businesses seeking high-performance React.js and full-stack development. We specialize in custom UI/UX and scalable web solutions.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/5 backdrop-blur-sm">
+              <h3 className="text-lg font-bold text-secondary mb-2">Does Sanmora provide SEO and Digital Marketing?</h3>
+              <p className="text-slate-400 text-sm">Yes, we provide ROI-focused digital marketing and SEO services in Ahmedabad to help brands rank higher on Google and increase conversions through data-driven strategies.</p>
+            </div>
+          </div>
         </section>
       </motion.main>
 
