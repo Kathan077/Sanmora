@@ -14,8 +14,8 @@ import {
   MapPin,
   ExternalLink,
 } from "lucide-react";
-const Scene3D = React.lazy(() => import("./Scene3D"));
-import Logo from "./Logo";
+import Scene3D from "./Scene3D";
+import Logo from "./assets/Samoa in vibrant gradient typography.png";
 
 const Navbar = () => {
   return (
@@ -27,7 +27,13 @@ const Navbar = () => {
     >
       <div className="flex items-center gap-3">
         {/* Logo */}
-        <Logo className="h-[80px]" />
+        <img
+          src={Logo}
+          alt="Sanmora Logo - Website Development & Digital Marketing Ahmedabad"
+          className="h-[80px] w-auto object-contain"
+          fetchpriority="high"
+          loading="eager"
+        />
       </div>
 
       <button className="md:hidden text-white">
@@ -117,9 +123,7 @@ const UnderDevelopment = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-[#050505] text-white font-sans flex flex-col">
       <Navbar />
-      <React.Suspense fallback={<div className="absolute inset-0 bg-[#050505]" />}>
-        <Scene3D />
-      </React.Suspense>
+      <Scene3D />
 
       <div className="fixed inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/40 pointer-events-none z-0" />
 
@@ -294,7 +298,11 @@ const UnderDevelopment = () => {
             {/* Brand Section */}
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-3">
-                <Logo className="h-16" />
+                <img
+                  src={Logo}
+                  alt="Sanmora Logo - Leading Website Development Company"
+                  className="h-16 w-auto object-contain brightness-110"
+                />
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
                 <span className="text-white font-medium">Sanmora Techno</span> is redefining digital excellence through high-performance web experiences, 
