@@ -7,14 +7,14 @@ import {
   Code,
   Globe,
   TrendingUp,
+  Menu,
   ChevronDown,
   Mail,
   Phone,
   MapPin,
+  ExternalLink,
 } from "lucide-react";
-
-// Performance: Lazy load heavy 3D components
-const Scene3D = React.lazy(() => import("./Scene3D"));
+import Scene3D from "./Scene3D";
 import Logo from "./assets/Samoa in vibrant gradient typography.png";
 
 const Navbar = () => {
@@ -30,8 +30,6 @@ const Navbar = () => {
         <img
           src={Logo}
           alt="Sanmora Logo - Website Development & Digital Marketing Ahmedabad"
-          width="250"
-          height="80"
           className="h-[80px] w-auto object-contain"
           fetchpriority="high"
           loading="eager"
@@ -100,7 +98,7 @@ const UnderDevelopment = () => {
       y: 0,
       opacity: 1,
       filter: "blur(0px)",
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -125,11 +123,7 @@ const UnderDevelopment = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-[#050505] text-white font-sans flex flex-col">
       <Navbar />
-      
-      {/* Performance: Defer 3D Scene loading to not block LCP */}
-      <React.Suspense fallback={<div className="absolute inset-0 bg-[#050505]" />}>
-        <Scene3D />
-      </React.Suspense>
+      <Scene3D />
 
       <div className="fixed inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/40 pointer-events-none z-0" />
 
@@ -307,8 +301,6 @@ const UnderDevelopment = () => {
                 <img
                   src={Logo}
                   alt="Sanmora Logo - Leading Website Development Company"
-                  width="200"
-                  height="64"
                   className="h-16 w-auto object-contain brightness-110"
                 />
               </div>
