@@ -29,7 +29,7 @@ const Navbar = () => {
         {/* Logo */}
         <img
           src={Logo}
-          alt="Sanmora Logo"
+          alt="Sanmora Logo - Website Development & Digital Marketing Ahmedabad"
           className="h-[80px] w-auto object-contain"
         />
       </div>
@@ -130,6 +130,7 @@ const UnderDevelopment = () => {
         initial="hidden"
         animate="visible"
         className="relative z-10 flex-grow flex flex-col items-center justify-center px-4 pt-32 pb-20 text-center max-w-7xl mx-auto w-full"
+        id="home"
       >
         <motion.div variants={itemVariants} className="mb-8">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
@@ -142,6 +143,7 @@ const UnderDevelopment = () => {
 
         <motion.div variants={itemVariants} className="mb-10">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-6 leading-[1.1]">
+            <span className="text-secondary text-base md:text-xl font-mono tracking-widest block mb-4 uppercase">Advanced Digital Solutions</span>
             Building the <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-200 to-secondary">
               Next Generation
@@ -149,15 +151,12 @@ const UnderDevelopment = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
-            Sanmora is redefining digital excellence. We are currently refining
-            our platform to deliver an exceptional experience.
+            Sanmora is redefining digital excellence in Ahmedabad. We are currently refining
+            our platform to deliver an exceptional experience in website development and strategic marketing.
           </p>
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 w-full"
-        >
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 w-full" id="services">
           {services.map((service, idx) => (
             <motion.div
               key={idx}
@@ -167,21 +166,22 @@ const UnderDevelopment = () => {
               <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-primary mb-6">
                 <service.icon size={24} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h2 className="text-xl font-bold text-white mb-2">
                 {service.label}
-              </h3>
+              </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
                 {service.desc}
               </p>
             </motion.div>
           ))}
-        </motion.div>
+        </section>
 
         {/* CONTACT FORM */}
-        <motion.div variants={itemVariants} className="w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-white">
+        <section className="w-full" id="contact">
+          <h2 className="text-2xl font-semibold mb-4 text-white">
             Contact Us
-          </h3>
+          </h2>
+
 
           <form
             onSubmit={onSubmit}
@@ -272,7 +272,7 @@ const UnderDevelopment = () => {
               </p>
             )}
           </form>
-        </motion.div>
+        </section>
       </motion.main>
 
       <footer className="relative z-10 w-full border-t border-white/5 bg-black/40 backdrop-blur-xl pt-16 pb-8">
@@ -283,13 +283,13 @@ const UnderDevelopment = () => {
               <div className="flex items-center gap-3">
                 <img
                   src={Logo}
-                  alt="Sanmora Logo"
+                  alt="Sanmora Logo - Leading Website Development Company"
                   className="h-16 w-auto object-contain brightness-110"
                 />
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-                Redefining digital excellence through high-performance web experiences, 
-                strategic marketing, and robust IT solutions.
+                <span className="text-white font-medium">Sanmora Techno</span> is redefining digital excellence through high-performance web experiences, 
+                strategic marketing, and robust IT solutions in Ahmedabad.
               </p>
               <div className="flex gap-4">
                 {[
@@ -303,6 +303,7 @@ const UnderDevelopment = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -3, scale: 1.1 }}
+                    aria-label={`Visit our ${Icon.name} profile`}
                     className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all shadow-lg"
                   >
                     <Icon size={18} />
@@ -313,17 +314,17 @@ const UnderDevelopment = () => {
 
             {/* Services Section */}
             <div>
-              <h4 className="text-white font-semibold mb-6 flex items-center gap-2">
+              <h2 className="text-white font-semibold mb-6 flex items-center gap-2">
                 <div className="w-1 h-4 bg-primary rounded-full" />
                 Our Services
-              </h4>
+              </h2>
               <ul className="space-y-4">
                 {["Web Development", "Digital Marketing", "Mobile Application", "IT Solutions"].map((item) => (
                   <li key={item}>
-                    <button className="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                    <a href="#services" className="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                       <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover:bg-primary transition-all" />
                       {item}
-                    </button>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -331,10 +332,10 @@ const UnderDevelopment = () => {
 
             {/* Contact Section */}
             <div>
-              <h4 className="text-white font-semibold mb-6 flex items-center gap-2">
+              <h2 className="text-white font-semibold mb-6 flex items-center gap-2">
                 <div className="w-1 h-4 bg-secondary rounded-full" />
                 Connect With Us
-              </h4>
+              </h2>
               <div className="space-y-5">
                 <a href="mailto:sanmora.techno@gmail.com" className="flex items-start gap-4 group cursor-pointer">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary/10 transition-all">
